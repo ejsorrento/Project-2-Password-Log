@@ -1,0 +1,22 @@
+<h1>All Users</h1>
+<h2><%= link_to 'New user', new_user_path %></h2>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Password</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.chief_username %></td>
+      <td><%= user.chief_email %></td>
+      <td><%= user.chief_password %></td>
+      <td><%= link_to 'Show', user_path(user) %></td>
+
+
+
+    </tr>
+  <% end %>
+</table>

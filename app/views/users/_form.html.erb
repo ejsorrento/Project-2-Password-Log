@@ -1,0 +1,27 @@
+<%= form_for @user do |f| %>
+
+
+
+
+
+  <p>
+    <%= f.label :chief_username %><br>
+    <%= f.text_field :chief_username %>
+  </p>
+
+  <p>
+    <%= f.label :chief_email %><br>
+    <%= f.text_area :chief_email %>
+  </p>
+
+  <p>
+    <%= f.label :chief_password %><br>
+    <%= f.text_field :chief_password %>
+  </p>
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

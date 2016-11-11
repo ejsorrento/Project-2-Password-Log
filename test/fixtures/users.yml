@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  chief_username: MyString
+  chief_email: MyString
+  chief_password: MyString
+
+two:
+  chief_username: MyString
+  chief_email: MyString
+  chief_password: MyString

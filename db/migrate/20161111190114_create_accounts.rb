@@ -4,6 +4,7 @@ class CreateAccounts < ActiveRecord::Migration[5.0]
       t.string :website
       t.string :assoc_email
       t.string :assoc_password
+      t.integer :user_id
 
       t.timestamps
     end

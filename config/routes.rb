@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :accounts
   resources :users do
     resources :accounts
-
-  root 'welcome#index'
 end
+  root 'welcome#index'
 
-# resources :accounts
+
 end

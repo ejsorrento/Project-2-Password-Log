@@ -1,3 +1,23 @@
-<h2><%= link_to "Accounts", accounts_path %></h2>
-<p><%= @account.website %></p>
-<p><%= @account.assoc_email %></p>
+<h1>Current accounts</h1>
+
+
+<p>
+  <strong>Website:</strong>
+  <%= @account.website %>
+</p>
+
+<p>
+  <strong>Associated email:</strong>
+  <%= @account.assoc_email %>
+</p>
+
+<p>
+  <strong>Associated password:</strong>
+  <%= @account.assoc_password %>
+</p>
+
+
+<%= link_to 'Back', user_path %>
+<%= link_to 'Destroy', @account,
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>

@@ -18,6 +18,8 @@
 
 
 
+<td><%= link_to 'Accounts', user_accounts_path(@user) %></td>
+
 <h2>Accounts</h2>
 <% @user.accounts.each do |account| %>
   <p>
@@ -25,38 +27,12 @@
     <%= account.website %>
   </p>
 
-  <p>
-    <strong>Associated email:</strong>
-    <%= account.assoc_email %>
-  </p>
 
-  <p>
-    <strong>Associated password:</strong>
-    <%= account.assoc_password %>
-  </p>
-<% end %>
-
-<h2>Add an account:</h2>
-<%= form_for([@user, @user.accounts.build]) do |f| %>
-  <p>
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
-  </p>
-  <p>
-    <%= f.label :assoc_email %><br>
-    <%= f.text_area :assoc_email %>
-  </p>
-  <p>
-    <%= f.label :assoc_password %><br>
-    <%= f.text_area :assoc_password %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
 <% end %>
 
 
-<%= link_to 'Back', users_path %>
+
+<%= link_to 'Return to All Users', users_path %>
 <%= link_to 'Destroy', user_path,
               method: :delete,
               data: { confirm: 'Are you sure?' } %>

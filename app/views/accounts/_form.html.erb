@@ -1,5 +1,8 @@
 
-  <%= form_for @user do |f| %>
+
+
+  <%= form_for user_accounts_path do |f| %>
+
 
 
 
@@ -20,10 +23,7 @@
       <%= f.text_field :assoc_password %>
     </p>
 
-    <p>
-      <%= f.label :user_id %><br>
-      <%= f.text_field :user_id %>
-    </p>
+
 
 
     <p>

@@ -1,18 +1,24 @@
-<h1>All Accounts</h1>
-<h2><%= link_to 'New account', new_user_account_path %></h2>
+<h1>Current accounts</h1>
 
-<table>
-  <tr>
-    <th>Website</th>
 
-  </tr>
 
-  <% @accounts.each do |account| %>
-    <tr>
-      <td><%= account.assoc_email %></td>
-      <td><%= link_to 'Show', account_path(account) %></td>
-    </tr>
-  <% end %>
-</table>
 
-<td><%= link_to 'Return to User Info', users_path %></td>
+
+<div>
+<h2>Website:</h2>
+
+<% @accounts.each do |account| %>
+     <h4><%= account.website %></h4>
+     <h4><%= link_to 'Show', user_account_path(@user, account.id) %></h4>
+ <% end %>
+
+</div>
+
+
+
+
+
+
+
+<%= link_to 'New Account', new_user_account_path %> |
+<%= link_to 'Return to Chief User', @user %>

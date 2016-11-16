@@ -1,5 +1,4 @@
-<h1>Current accounts</h1>
-
+<h1>Stored Chief Account Info</h1>
 
 <p>
   <strong>Website:</strong>
@@ -12,12 +11,12 @@
 </p>
 
 <p>
-  <strong>Associated password:</strong>
+  <strong>Associated email:</strong>
   <%= @account.assoc_password %>
 </p>
 
-
-<%= link_to 'Back', user_path %>
-<%= link_to 'Destroy', @account,
+<%= link_to 'Edit', edit_user_account_path(@user, @account) %> |
+<%= link_to 'Destroy Account', user_account_path(@user, @account),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+              data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Return to Chief Account', user_accounts_path %>

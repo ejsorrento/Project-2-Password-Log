@@ -1,38 +1,24 @@
 <h1>Chief User Information</h1>
-<%= link_to 'Edit', edit_user_path(@user) %>
 
 <p>
   <strong>Username:</strong>
-  <%= @user.chief_username %>
+  <strong><%= @user.chief_username %></strong>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= @user.chief_email %>
+  <strong><%= @user.chief_email %></strong>
 </p>
 
 <p>
   <strong>Password:</strong>
-  <%= @user.chief_password %>
+  <strong><%= @user.chief_password %></strong>
 </p>
 
+<h2><%= link_to 'Current User Accounts', user_accounts_path(@user) %></h2>
 
-
-<td><%= link_to 'Accounts', user_accounts_path(@user) %></td>
-
-<h2>Accounts</h2>
-<% @user.accounts.each do |account| %>
-  <p>
-    <strong>Websites:</strong>
-    <%= account.website %>
-  </p>
-
-
-<% end %>
-
-
-
-<%= link_to 'Return to All Users', users_path %>
-<%= link_to 'Destroy', user_path,
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Destroy', user_path(@user),
+              mestrongod: :delete,
+              data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Return to All Chief User', users_path %>

@@ -12,7 +12,7 @@ class AccountsController < ApplicationController
 
   def new
     @user = User.find(params[:user_id])
-    @accounts = @user.accounts.new
+    @account = @user.accounts.new
   end
 
   def create

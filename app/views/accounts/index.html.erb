@@ -2,23 +2,24 @@
 
 
 
+<%= link_to 'New Account', new_user_account_path %>
 
 
-<div>
-<h2>Website:</h2>
-
-<% @accounts.each do |account| %>
-     <h4><%= account.website %></h4>
-     <h4><%= link_to 'Show', user_account_path(@user, account.id) %></h4>
- <% end %>
-
-</div>
-
-
-
+<h3>
+  <strong><% @accounts.each do |account| %></strong>
+     <strong>Website:</strong>
+     <strong><%= account.website %></strong>
+     <strong><%= link_to 'Show', user_account_path(@user, account.id) %></strong>
+     <% end %>
+ </strong>
+</h3>
 
 
 
 
-<%= link_to 'New Account', new_user_account_path %> |
-<%= link_to 'Return to Chief User', @user %>
+
+
+
+
+
+<%= link_to 'Return to Chief User', @user %> |

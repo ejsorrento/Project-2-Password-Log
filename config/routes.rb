@@ -8,7 +8,7 @@ resource :session
 
   resources :welcome
 
-  
+  root "/"
 
 
 end
